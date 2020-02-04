@@ -11,7 +11,9 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.10.0"
+    "algoliasearch": "^3.35.1",
+    "nuxt": "^2.10.0",
+    "vue-instantsearch": "^2.7.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0"
