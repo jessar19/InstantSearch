@@ -1,5 +1,7 @@
 import algoliasearch from 'algoliasearch/lite'
 import { createInstantSearch } from 'vue-instantsearch'
+import { history } from 'instantsearch.js/es/lib/routers'
+import { simple } from 'instantsearch.js/es/lib/stateMappings'
 export default ({ app }, inject) => {
     const searchClient = algoliasearch(
         'latency',
@@ -7,6 +9,10 @@ export default ({ app }, inject) => {
     )
     const { instantsearch } = createInstantSearch({
         searchClient,
+        routing : {
+            router : history(),
+            stateMapping : simple()
+        },
         indexName: 'instant_search'
     })
     inject('instantsearch', instantsearch)

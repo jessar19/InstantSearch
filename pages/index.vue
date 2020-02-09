@@ -94,10 +94,11 @@
         beforeMount () {
             this.$instantsearch.hydrate(this.instantSearchState)
         },
-        asyncData({app}) {
+        asyncData({app , query }) {
             const instantsearch = app.$instantsearch
             return instantsearch
                 .findResultsState({
+                    query : query.query,
                     hitsPerPage: 10 
                 })
                 .then (() => {
