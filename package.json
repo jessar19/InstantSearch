@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "algoliasearch": "^3.35.1",
-    "nuxt": "^2.10.0",
+    "nuxt": "^2.15.8",
     "vue-instantsearch": "^2.7.0"
   },
   "devDependencies": {
